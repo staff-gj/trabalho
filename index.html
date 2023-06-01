@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo Educacional</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="tempo.css">
+  <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+</head>
+<body>
+  <div class="bg"></div>
+  
+  <div>
+    <span class="arrow" onclick="toggleMenu()">></span>
+    <ul id="menu" class="menu">
+      <li class="one"><a href="#" onclick="selectDiscipline('Geral')">Geral</a></li>
+      <li class="two"><a href="#" onclick="selectDiscipline('Ciências')">Ciências</a></li>
+      <li class="three"><a href="#" onclick="selectDiscipline('Literatura')">Literatura</a></li>
+      <li class="four"><a href="#" onclick="selectDiscipline('Química')">Química</a></li>
+    </ul>
+  </div>
+
+  <div class="btn">
+    <h2 id="materia"></h2>
+    <p id="question"></p>
+    <input class="sec" type="text" id="answer">
+    <button class="verificar" onclick="checkAnswer()">Verificar</button>
+    <button class="pular" onclick="skipQuestion()">Pular</button>
+    <p id="feedback"></p>
+    <p>Pontuação: <span id="score-value">0</span></p>
+    <p id="hints">Dicas: <span id="hints-value"></span></p>
+    <button class="dicas" onclick="useHint()">Dicas</button>
+  </div>
+
+  <div id="timer">
+    Tempo restante: <span id="time"></span>
+    <div id="timer-container">
+      <div id="timer-bar"></div>
+    </div>          
+    <select id="timer-select">
+      <option value="1">Difícil (1 minuto)</option>
+      <option value="3">Médio (3 minutos)</option>
+      <option value="5">Fácil (5 minutos)</option>
+    </select>
+    <button class="iniciar" id="start-button" onclick="startTimer()">Iniciar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
